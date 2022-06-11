@@ -1,0 +1,47 @@
+{
+  "name": "FPF Tech - Sistema de Vendas",
+  "version": "1.0.0",
+  "description": "FPF Tech - Sistema de Vendas",
+  "main": "./api/index.js",
+  "scripts": {
+    "start": "node index.js ",
+    "test": "npx jest --coverage",
+    "test2": "npx jest --watch",
+    "database": "npx sequelize-cli db:create",
+    "migrate": "npx sequelize-cli db:migrate",
+    "seed": "npx sequelize-cli db:seed:all"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emanueleborges/fpftech-projetofinal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emanueleborges/fpftech-projetofinal/issues"
+  },
+  "homepage": "https://github.com/emanueleborges/fpftech-projetofinal#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.16",
+    "path": "^0.12.7",
+    "sequelize": "^6.18.0",
+    "sequelize-cli": "^6.4.1",
+    "swagger-ui-express": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "eslint": "^8.13.0",
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2",
+    "swagger-autogen": "^2.21.3",
+    "ts-jest": "^27.1.4"
+  }
+}
