@@ -23,6 +23,18 @@ module.exports = (sequelize, DataTypes) => {
           msg: "Essse campo deve ter entre 1 e 128 caracteres!" ,
         },
       }
+    },
+    Preco: {
+      type: DataTypes.FLOAT,
+      validate: {
+        notEmpty: {
+          msg: "Essse campo não pode ser nulo!" ,
+        },
+        len: {
+          args: [1, 128],
+          msg: "Essse campo deve ter entre 1 e 128 caracteres!" ,
+        },
+      }
     }
   },
    {

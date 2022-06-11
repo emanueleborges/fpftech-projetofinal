@@ -6,9 +6,9 @@ class ProdutosController {
      * POST /Produtos
      */
      static async insert(req, res) {
-        const { Nome } = req.body;
+        const { Nome, Preco } = req.body;
             try {
-                const resp = await database.Produtos.create({ Nome: Nome });
+                const resp = await database.Produtos.create({ Nome: Nome, Preco: Preco });
                 return res.status(200).json(resp);
             } catch (error) {
                 return res.status(500).json(error.message);
@@ -60,9 +60,9 @@ class ProdutosController {
      */
     static async update_one(req, res) {
         const { id } = req.params;
-        const { Nome } = req.body;
+        const { Nome, Preco } = req.body;
         try {
-            const resp = await database.Produtos.update({ Nome: Nome  }, {where: { id: id } });
+            const resp = await database.Produtos.update({ Nome: Nome, Preco: Preco  }, {where: { id: id } });
             return res.status(200).json({ mensagem: `ID:${id} atualizado com sucesso` });
         } catch (error) {
             return res.status(500).json(error.message);

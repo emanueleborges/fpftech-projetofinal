@@ -26,5 +26,4 @@ module.exports = app => {
     res.header("Access-Control-Allow-Headers", "Authorization");
     next();
   }); 
-  
 };
