@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-card-title>Excluir Cliente</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome" [value]="client.Nome" disabled>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="deleteClient()" color="warn" class="delete">
+        Excluir
+    </button>
+    <button mat-raised-button (click)="cancel()" color="accent" class="cancel">
+        Cancelar
+    </button>
+</mat-card>

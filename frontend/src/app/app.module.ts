@@ -39,7 +39,17 @@ import { ProductUpdateComponent } from './components/product-update/product-upda
 import { ProductDeleteComponent } from './components/product-delete/product-delete.component'
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
 import { ProductRead2Component } from './components/product/product-read2/product-read2.component';
-registerLocaleData(localePt);
+
+
+import { ClientCrudComponent } from './views/client-crud/client-crud.component';
+import { ClientCreateComponent } from './components/client/client-create/client-create.component';
+import { ClientUpdateComponent } from './components/client-update/client-update.component';
+import { ClientDeleteComponent } from './components/client-delete/client-delete.component'
+import { ClientReadComponent } from './components/client/client-read/client-read.component';
+import { ClientRead2Component } from './components/client/client-read2/client-read2.component';
+
+
+registerLocaleData(localePt); 
 
 @NgModule({
   declarations: [
@@ -58,7 +68,14 @@ registerLocaleData(localePt);
     ProductReadComponent,
     ProductRead2Component,
     ProductUpdateComponent,
-    ProductDeleteComponent
+    ProductDeleteComponent,
+
+    ClientCrudComponent,
+    ClientCreateComponent,
+    ClientReadComponent,
+    ClientRead2Component,
+    ClientUpdateComponent,
+    ClientDeleteComponent
   ],
   imports: [
     BrowserModule,

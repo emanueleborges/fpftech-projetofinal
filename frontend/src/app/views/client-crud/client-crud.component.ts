@@ -3,25 +3,25 @@ import { Router } from '@angular/router'
 import { HeaderService } from 'src/app/components/template/header/header.service';
 
 @Component({
-  selector: 'app-product-crud',
-  templateUrl: './product-crud.component.html',
-  styleUrls: ['./product-crud.component.css']
+  selector: 'app-client-crud',
+  templateUrl: './client-crud.component.html',
+  styleUrls: ['./client-crud.component.css']
 })
-export class ProductCrudComponent implements OnInit {
+export class ClientCrudComponent implements OnInit {
 
   constructor(private router: Router, private headerService: HeaderService) { 
     headerService.headerData = {
-      title: 'Tela de Produtos',
+      title: 'Tela de Clientes',
       icon: 'storefront',
-      routeUrl: '/products'
+      routeUrl: '/clients'
     }
    }
 
   ngOnInit(): void {
   }
 
-  navigateToProductCreate() : void {
-    this.router.navigate(['/products/create'])
+  navigateToClientCreate() : void {
+    this.router.navigate(['/clients/create'])
   }
 
 }

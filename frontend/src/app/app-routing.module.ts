@@ -8,6 +8,11 @@ import { ProductCreateComponent } from './components/product/product-create/prod
 import { ProductUpdateComponent } from './components/product-update/product-update.component';
 import { ProductDeleteComponent } from './components/product-delete/product-delete.component';
 
+import { ClientCrudComponent } from './views/client-crud/client-crud.component';
+import { ClientCreateComponent } from './components/client/client-create/client-create.component';
+import { ClientUpdateComponent } from './components/client-update/client-update.component';
+import { ClientDeleteComponent } from './components/client-delete/client-delete.component';
+
 const routes: Routes = [{
   path: "",
   component: HomeComponent
@@ -23,7 +28,24 @@ const routes: Routes = [{
 },{
   path: "products/delete/:id",
   component: ProductDeleteComponent
-}];
+},
+
+
+{
+  path: "clients",
+  component: ClientCrudComponent
+},{
+  path: "clients/create",
+  component: ClientCreateComponent
+},{
+  path: "clients/update/:id",
+  component: ClientUpdateComponent
+},{
+  path: "clients/delete/:id",
+  component: ClientDeleteComponent
+},
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
