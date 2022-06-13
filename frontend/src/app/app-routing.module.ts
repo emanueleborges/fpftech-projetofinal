@@ -13,10 +13,17 @@ import { ClientCreateComponent } from './components/client/client-create/client-
 import { ClientUpdateComponent } from './components/client-update/client-update.component';
 import { ClientDeleteComponent } from './components/client-delete/client-delete.component';
 
+import { SaleCrudComponent } from './views/sale-crud/sale-crud.component';
+import { SaleCreateComponent } from './components/sale/sale-create/sale-create.component';
+import { SaleUpdateComponent } from './components/sale-update/sale-update.component';
+import { SaleDeleteComponent } from './components/sale-delete/sale-delete.component';
+
 const routes: Routes = [{
   path: "",
   component: HomeComponent
-},{
+},
+
+{
   path: "products",
   component: ProductCrudComponent
 },{
@@ -30,7 +37,6 @@ const routes: Routes = [{
   component: ProductDeleteComponent
 },
 
-
 {
   path: "clients",
   component: ClientCrudComponent
@@ -43,6 +49,20 @@ const routes: Routes = [{
 },{
   path: "clients/delete/:id",
   component: ClientDeleteComponent
+},
+
+{
+  path: "sales",
+  component: SaleCrudComponent
+},{
+  path: "sales/create",
+  component: SaleCreateComponent
+},{
+  path: "sales/update/:id",
+  component: SaleUpdateComponent
+},{
+  path: "sales/delete/:id",
+  component: SaleDeleteComponent
 },
 
 ];

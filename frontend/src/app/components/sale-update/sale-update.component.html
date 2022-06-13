@@ -1,0 +1,23 @@
+<mat-card>
+    <mat-card-title>Alterar Venda</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Cliente" [(ngModel)]="sale.Cliente_fk" name="Cliente_fk">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Produto" [(ngModel)]="sale.Produto_fk" name="Produto_fk">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Quantidade" [(ngModel)]="sale.Quantidade" name="Quantidade">
+        </mat-form-field>
+       
+    </form>
+    <button mat-raised-button (click)="updateSale()" color="accent" class="save">
+        Atualizar
+    </button>
+    <button mat-raised-button (click)="cancel()" color="warn" class="cancel">
+        Cancelar
+    </button>
+</mat-card>

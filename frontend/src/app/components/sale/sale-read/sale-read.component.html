@@ -1,0 +1,49 @@
+<div class="mat-elevation-z12">
+    <table mat-table [dataSource]="sales">
+      <!-- Id Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef ><h1>ID</h1></th>
+        <td mat-cell *matCellDef="let row">{{row.id}}</td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="Cliente_fk">
+        <th mat-header-cell *matHeaderCellDef ><h1>Cliente_fk</h1></th>
+        <td mat-cell *matCellDef="let row">{{row.Cliente_fk}} - {{row.Cliente.Nome}}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="Produto_fk">
+        <th mat-header-cell *matHeaderCellDef ><h1>Produto_fk</h1></th>
+        <td mat-cell *matCellDef="let row">{{row.Produto_fk}} - {{row.Produto.Nome}}  </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="Quantidade">
+        <th mat-header-cell *matHeaderCellDef ><h1>Quantidade</h1></th>
+        <td mat-cell *matCellDef="let row">{{row.Quantidade}} </td>
+      </ng-container>
+    
+         <!-- Action Column -->
+         <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef ><h1>Ações</h1></th>
+          <td mat-cell *matCellDef="let row">
+            <a routerLink="/sales/update/{{ row.id }}" class="edit"> 
+              <i class="material-icons">
+                edit
+              </i>
+            </a>
+            <a routerLink="/sales/delete/{{ row.id }}" class="delete"> 
+              <i class="material-icons">
+                delete
+              </i>
+            </a>
+        </ng-container>
+    
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  
+  </div>
+  

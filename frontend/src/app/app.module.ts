@@ -49,6 +49,13 @@ import { ClientReadComponent } from './components/client/client-read/client-read
 import { ClientRead2Component } from './components/client/client-read2/client-read2.component';
 
 
+import { SaleCrudComponent } from './views/sale-crud/sale-crud.component';
+import { SaleCreateComponent } from './components/sale/sale-create/sale-create.component';
+import { SaleUpdateComponent } from './components/sale-update/sale-update.component';
+import { SaleDeleteComponent } from './components/sale-delete/sale-delete.component'
+import { SaleReadComponent } from './components/sale/sale-read/sale-read.component';
+import { SaleRead2Component } from './components/sale/sale-read2/sale-read2.component';
+
 registerLocaleData(localePt); 
 
 @NgModule({
@@ -75,7 +82,14 @@ registerLocaleData(localePt);
     ClientReadComponent,
     ClientRead2Component,
     ClientUpdateComponent,
-    ClientDeleteComponent
+    ClientDeleteComponent, 
+
+    SaleCrudComponent,
+    SaleCreateComponent,
+    SaleReadComponent,
+    SaleRead2Component,
+    SaleUpdateComponent,
+    SaleDeleteComponent
   ],
   imports: [
     BrowserModule,
