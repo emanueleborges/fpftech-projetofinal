@@ -5,6 +5,7 @@
   "main": "./api/index.js",
   "scripts": {
     "start": "node index.js ",
+    "startdev": "nodemon index.js ",
     "test": "npx jest --coverage",
     "test2": "npx jest --watch",
     "database": "npx sequelize-cli db:create",

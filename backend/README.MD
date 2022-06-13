@@ -53,4 +53,24 @@ npm start
 # criar documentacao swagger
 node swagger.js   
 
+# clonar projeto
+git clone git@github.com:emanueleborges/fpftech-projetofinal.git  
 
+# instalar pacotes
+npm install
+
+# criar database
+npx sequelize-cli db:create
+
+# gera migrations na database
+npx sequelize-cli db:migrate
+
+
+# executar aplicacao 
+npm start
+
+# instalar angular cli 
+npm install -g @angular/cli
+
+# executar angular cli 
+ng serve
