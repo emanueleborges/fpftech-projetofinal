@@ -21,35 +21,35 @@ npm install swagger-autogen --dev
 criar migrations
 npx sequelize-cli migration:generate --name Create-Produtos npx sequelize-cli migration:generate --name Create-Vendas npx sequelize-cli migration:generate --name Create-Clientes
 
-criar database
+# criar database
 npx sequelize-cli db:create
 
-gera migrations na database
+# gerar migrations na database
 npx sequelize-cli db:migrate
 
-executar aplicacao
+# executar aplicacao
 npm start
 
-criar documentacao swagger
+# criar documentacao swagger
 node swagger.js
 
-clonar projeto
+# clonar projeto
 git clone git@github.com:emanueleborges/fpftech-projetofinal.git
 
-instalar pacotes
+# instalar pacotes
 npm install
 
-criar database
+# criar database
 npx sequelize-cli db:create
 
-gera migrations na database
+# gerar migrations na database
 npx sequelize-cli db:migrate
 
-executar aplicacao
+# executar aplicacao
 npm start
 
-instalar angular cli
+# instalar angular cli
 npm install -g @angular/cli
 
-executar angular cli
+# executar angular cli
 ng serve
