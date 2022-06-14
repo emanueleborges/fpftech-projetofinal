@@ -11,7 +11,7 @@ import { EMPTY } from 'rxjs';
 })
 export class ProductService {
 
-  baseUrl = "http://localhost:3000/api/produtos"
+  baseUrl = "https://fpfbackend.herokuapp.com/api/produtos"
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
 
