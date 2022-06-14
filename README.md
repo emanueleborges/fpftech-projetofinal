@@ -55,14 +55,17 @@ npm install -g @angular/cli
 ng serve
 
 # instalar Frontend no Heroku
-- Criar Arquivos na pasta Frontend   
+
+Criar Arquivos na pasta Frontend   
+------------------------------------------
 Procfile
 ------------------------------------------
 web: node server
+
+
 ------------------------------------------
 server.js
 ------------------------------------------
-
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -72,11 +75,16 @@ app.get('/*', (req, res) =>
 );
 app.listen(process.env.PORT || 8080);
 ------------------------------------------
+
+# instalar Express 
 npm install express
 
 # instalar Backend no Heroku
-- Selecionar pasta Frontend aonde esta o index.js ou server.js   
-- package.json
+Selecionar pasta Frontend aonde esta o index.js ou server.js   
+
+------------------------------------------
+package.json
+------------------------------------------
 "scripts": {
     "start": "node index.js ",    
     ou  
