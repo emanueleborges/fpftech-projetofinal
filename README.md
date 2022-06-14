@@ -9,6 +9,9 @@ Crie um crud para inserção de Clientes, Produtos e Vendas (um Frontend Web no 
 Desenvolva um webservice REST API para as 3 rotas abaixo: /produtos /vendas /clientes Por exemplo, se quisermos detalhes do produto cujo id é 215, o path utilizando GET deve ser /produtos?id=215 , e o retorno sendo formato json.
 Faça um mini dashboard mostrando os dados de vendas.
 Publique o resultado do seu código no GITLAB e envie o link do repositório para a avaliação. Extra: Criar imagens docker (uma para o frontend e outra para o backend) e utilizar uma imagem de banco de dados já existente. Nota 1: No arquivo leia-me do projeto, adicione todas as tecnologias e etapas de desenvolvimento que você gostaria de colocar se ele fosse maior e com uma equipe grande. Nota 2: Também no arquivo leia-me do projeto, colocar o passo a passo sobre de instalação da aplicação.
+
+## Construcao do Projeto 
+
 iniciar o projeto
 npm init
 
@@ -98,9 +101,15 @@ package.json
     "start": "node ./api/index.js ",
 
 
-
 # docker
 
 https://hub.docker.com/repository/docker/emanuelborges/fpfbackend
 
 https://hub.docker.com/repository/docker/emanuelborges/fpffrontend
+
+
+# heroku 
+
+Backend: https://fpfbackend.herokuapp.com/
+
+Frontend: https://fpffrontend.herokuapp.com/
