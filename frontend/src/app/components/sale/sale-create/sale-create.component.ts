@@ -3,6 +3,16 @@ import { SaleService } from '../sale.service';
 import { Router } from '@angular/router';
 import { Sale } from '../sale.model';
 
+
+import { Client } from '../../client/client.model';
+import { ClientService } from '../../client/client.service';
+
+
+
+import { Product } from '../../product/product.model';
+import { ProductService } from '../../product/product.service';
+
+
 @Component({
   selector: 'app-sale-create',
   templateUrl: './sale-create.component.html',
@@ -18,11 +28,23 @@ export class SaleCreateComponent implements OnInit {
     Cliente:[],
     Produto:[]
   }
+  clients: Client[] = []
 
-  constructor(private saleService: SaleService,
+  products: Product[] = []
+
+  constructor(
+    private saleService: SaleService,
+    private clienteService : ClientService, 
+    private productService : ProductService, 
     private router: Router) { }
 
   ngOnInit(): void {
+    this.clienteService.read().subscribe(clients => {
+      this.clients = clients
+    }),
+    this.productService.read().subscribe(products => {
+      this.products = products
+    })
   }
 
   createSale(): void {

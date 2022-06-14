@@ -2,12 +2,18 @@
     <mat-card-title>Alterar Venda</mat-card-title>
     <form>
         <mat-form-field>
-            <input matInput placeholder="Cliente" [(ngModel)]="sale.Cliente_fk" name="Cliente_fk">
+            <input matInput placeholder="Cliente" [(ngModel)]="sale.Cliente_fk" name="Cliente_fk" disabled>
+            <select type="text" [(ngModel)]="sale.Cliente_fk" name="Cliente_fk">
+                <option *ngFor="let categorias of clients" value= {{categorias.id}}> {{categorias.Nome}} </option>
+            </select>
         </mat-form-field>
-
         <mat-form-field>
-            <input matInput placeholder="Produto" [(ngModel)]="sale.Produto_fk" name="Produto_fk">
+            <input matInput placeholder="Produto" [(ngModel)]="sale.Produto_fk" name="Produto_fk" disabled>
+            <select type="text" [(ngModel)]="sale.Produto_fk" name="Produto_fk">
+                <option *ngFor="let categorias of products" value= {{categorias.id}}> {{categorias.Nome}} </option>
+            </select> 
         </mat-form-field>
+       
 
         <mat-form-field>
             <input matInput placeholder="Quantidade" [(ngModel)]="sale.Quantidade" name="Quantidade">
