@@ -96,3 +96,11 @@ package.json
     ou  
 "scripts": {
     "start": "node ./api/index.js ",
+
+
+
+# docker
+
+https://hub.docker.com/repository/docker/emanuelborges/fpfbackend
+
+https://hub.docker.com/repository/docker/emanuelborges/fpffrontend
